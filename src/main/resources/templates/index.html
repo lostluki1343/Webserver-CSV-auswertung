@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CSV Plotter</title>
+</head>
+<body>
+<h1>CSV Plotter</h1>
+
+<form method="post" enctype="multipart/form-data" action="/upload">
+    <input type="file" name="file" accept=".csv"/>
+    <button type="submit">Hochladen</button>
+</form>
+
+<p th:text="${message}"></p>
+
+<h2>Plot</h2>
+<!-- Das Bild wird über den /plot Endpunkt geladen -->
+<img src="/plot" alt="Plot der CSV-Daten"/>
+
+</body>
+</html>
